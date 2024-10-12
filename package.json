@@ -2,7 +2,7 @@
   "name": "diabetes-webapp",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "server": "nodemon backend/server.js",
     "start": "NODE_ENV=production node backend/server.js",
