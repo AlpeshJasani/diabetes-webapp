@@ -19,4 +19,4 @@ const PredictionSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Prediction", PredictionSchema);
+export default mongoose.model("Prediction", PredictionSchema);

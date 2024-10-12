@@ -31,4 +31,4 @@ const Model1Schema = new mongoose.Schema(
   { timestamps: true }
 );
 
-module.exports = mongoose.model("Model1", Model1Schema);
+export default mongoose.model("Model1", Model1Schema);
