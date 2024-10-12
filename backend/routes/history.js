@@ -1,7 +1,8 @@
 import express from "express";
-import router from "express";
 import Model1 from "../models/Model1.js"; // Import the Model1 schema
 import Prediction from "../models/Prediction.js"; // Import the Prediction schema
+
+const router = express.Router(); // Create a new router instance
 
 // GET /api/history - Fetch prediction history for both models
 router.get("/history", async (req, res) => {
