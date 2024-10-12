@@ -1,6 +1,6 @@
 import express from "express";
 import router from "express";
-import User from "../models/User"; // Adjust the path as needed
+import User from "../models/User.js"; // Adjust the path as needed
 
 // POST /api/auth/signup - User Signup
 router.post("/signup", async (req, res) => {

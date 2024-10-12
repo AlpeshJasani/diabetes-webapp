@@ -1,8 +1,8 @@
 import express from "express";
 import axios from "axios";
 import dotenv from "dotenv"; // Import dotenv for environment variables
-import Prediction from "../models/Prediction"; // Import the Prediction model
-import Model1 from "../models/Model1"; // Import the Model1 model
+import Prediction from "../models/Prediction.js"; // Import the Prediction model
+import Model1 from "../models/Model1.js"; // Import the Model1 model
 
 const router = express.Router();
 
