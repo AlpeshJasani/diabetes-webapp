@@ -1,17 +1,16 @@
-const express = require("express");
-const cors = require("cors");
-const bodyParser = require("body-parser");
-const mongoose = require("mongoose");
-const dotenv = require("dotenv"); // Import dotenv for environment variables
-const path = require("path");
+import express from "express";
+import cors from "cors";
+import bodyParser from "body-parser";
+import mongoose from "mongoose";
+import dotenv from "dotenv"; // Import dotenv for environment variables
+import path from "path";
+
+import predictRoute from "./routes/predict.js";
+import authRoute from "./routes/auth.js";
+import historyRoutes from "./routes/history.js";
 
 // Load environment variables
 dotenv.config(); // Load variables from .env file
-
-// Import routes
-const predictRoute = require("./routes/predict.js");
-const authRoute = require("./routes/auth.js");
-const historyRoutes = require("./routes/history.js");
 
 // Create the Express app
 const app = express();

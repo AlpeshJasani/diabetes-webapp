@@ -1,7 +1,7 @@
-const express = require("express");
-const router = express.Router();
-const Model1 = require("../models/Model1"); // Import the Model1 schema
-const Prediction = require("../models/Prediction"); // Import the Model2 schema (Prediction)
+import express from "express";
+import router from "express";
+import Model1 from "../models/Model1"; // Import the Model1 schema
+import Prediction from "../models/Prediction"; // Import the Prediction schema
 
 // GET /api/history - Fetch prediction history for both models
 router.get("/history", async (req, res) => {
