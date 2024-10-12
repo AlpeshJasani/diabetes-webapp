@@ -112,4 +112,4 @@ router.post("/model1", async (req, res) => {
   }
 });
 
-module.exports = router;
+export default router;
