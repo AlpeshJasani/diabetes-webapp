@@ -10,7 +10,8 @@ const PredictionChart = ({ email }) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(`http://localhost:5000/api/history?email=${email}`);
+        // const response = await axios.get(`http://localhost:5000/api/history?email=${email}`);
+        const response = await axios.get(`https://diabetes-webapp.onrender.com/api/history?email=${email}`);
         const model1History = response.data.model1History;
 
         // Process the data to group by date and calculate average prediction

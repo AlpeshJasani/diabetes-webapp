@@ -198,8 +198,8 @@ const Model1 = () => {
     console.log("Encoded data:", encodingArray); // Log encoded data for debugging
 
     try {
-      // console.log('Sending request to:', 'http://localhost:5000/api/predict/model1');
-      const response = await axios.post("http://localhost:5000/api/predict/model1", { ...encodingArray, email, features: formData });
+      // const response = await axios.post("http://localhost:5000/api/predict/model1", { ...encodingArray, email, features: formData });
+      const response = await axios.post("https://diabetes-webapp.onrender.com/api/predict/model1", { ...encodingArray, email, features: formData });
 
       // console.log('Response:', response);
       const outcome = response.data.outcome;

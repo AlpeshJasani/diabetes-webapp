@@ -12,7 +12,8 @@ const History = () => {
     const fetchHistory = async () => {
       try {
         const email = localStorage.getItem("authEmail");
-        const response = await axios.get("http://localhost:5000/api/history", { params: { email } });
+        // const response = await axios.get("http://localhost:5000/api/history", { params: { email } });
+        const response = await axios.get("https://diabetes-webapp.onrender.com/api/history", { params: { email } });
         console.log("Fetched History Response:", response.data);
         setModel1History(response.data.model1History || []);
         setModel2History(response.data.model2History || []);
