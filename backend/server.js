@@ -3,6 +3,7 @@ const cors = require("cors");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv"); // Import dotenv for environment variables
+import path from "path";
 
 // Import routes
 const predictRoute = require("./routes/predict.js");
