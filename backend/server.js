@@ -5,13 +5,13 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv"); // Import dotenv for environment variables
 const path = require("path");
 
+// Load environment variables
+dotenv.config(); // Load variables from .env file
+
 // Import routes
 const predictRoute = require("./routes/predict.js");
 const authRoute = require("./routes/auth.js");
 const historyRoutes = require("./routes/history.js");
-
-// Load environment variables
-dotenv.config(); // Load variables from .env file
 
 // Create the Express app
 const app = express();
@@ -35,13 +35,11 @@ app.use("/api/predict", predictRoute); // Mount the prediction route at /api/pre
 app.use("/api/auth", authRoute); // Mount the auth routes at /api/auth
 app.use("/api", historyRoutes); // This adds the history route to the API
 
-if (process.env.NODE_ENV === "production") {
-  app.use(express.static(path.join(__dirname, "/frontend/dist")));
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html"));
-  });
-}
+app.get("*", (req, res) => {
+  res.sendFile(path.resolve(__dirname, "frontend", "dist", "index.html")); // __dirname/frontend/dist/index.html
+});
 
 // Start the server on port 5000
 app.listen(port, () => {
