@@ -1,6 +1,7 @@
-import express from "express";
-import router from "express";
+import express from "express"; // Correctly import express
 import User from "../models/User.js"; // Adjust the path as needed
+
+const router = express.Router(); // Create an instance of Router
 
 // POST /api/auth/signup - User Signup
 router.post("/signup", async (req, res) => {
